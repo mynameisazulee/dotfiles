@@ -12,13 +12,11 @@ case "$state" in
         local operations; operations=(
             'list: lists all dynamodbs'
             'describe: describes table X'
-            'scan: scans first X items in table Y'
+            'scan: scans table X to get Y items'
         )
         _describe -t operations 'operations' operations && ret=0
     ;;
 esac
-
-return 1;
 
 ddb() {
     if [[ $1 == "list" ]]; then
@@ -61,3 +59,6 @@ ddb() {
         fi
     fi
 }
+
+return 1;
+
