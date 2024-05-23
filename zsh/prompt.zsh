@@ -68,4 +68,4 @@ git_prompt_string() {
 RPS1='$(git_prompt_string)'
 
 autoload -U colors && colors
-PS1="%{$fg[yellow]%}[%w-%t]%{$fg[cyan]%}[%m]%{$fg[green]%}[%~]%{$reset_color%}\$ "
+PS1="%{$fg[yellow]%}[%D{%m/%f}%t]%{$fg[cyan]%}[%m]%{$fg[green]%}[%~]%{$reset_color%}\$ "
